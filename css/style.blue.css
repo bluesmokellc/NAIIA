@@ -1,19 +1,17 @@
-
 /* less codes */
-@mainColor: #F6F6F6;
-@whiteColor: #fff;
-@themeColor: #696069;
-@blockColor: #ffffff;
+@mainColor: #fff;
 
-@typoColor: #474749;
+@themeColor: #1d8d20;
+@themeColor: #20689b;
+@themeColor: #1cb3f3;
+@themeColor: #c42423;
+@themeColor: #199dd4;
+@themeColor: #199DD4;
+
+
+@typoColor: #333;
 @grayColor: #f6f6f6;
 @moreGrayColor: #efefef;
-
-@color1: #83a5db;
-@color2: #c85e45;
-@color3: #68c053;
-
-
 .whiteBg() {
 	background: url(../images/transparent-white.png);
 }
@@ -267,7 +265,7 @@ body {
 }
 
 .ui-header {
-    background: @whiteColor !important;
+    background: @mainColor;
     color: @typoColor;
     text-shadow: none;
     border: 1px solid @grayColor;
@@ -277,7 +275,7 @@ body {
     h1.ui-title {
         margin: 0 20% !important;
         text-transform: uppercase;
-	color: @color2;
+	color: @typoColor;
 	
         p {
             font-size: 12px;
@@ -285,7 +283,7 @@ body {
         }
         p:first-child {
             font-size: 15px;
-            color: @color1;
+            color: @themeColor;
         }
         p.no-margin {
             margin-top: 0;
@@ -299,19 +297,14 @@ body {
     
     .menu-button {
         left: 0;
-        img {
-            margin: 10px;
-        }
-        
-        
-	/*	.gradient(@mainColor, darken(@mainColor, 3%));
-		.drop-shadow(1px, 1px, 3px, 0.18); */
+		.gradient(@mainColor, darken(@mainColor, 3%));
+		.drop-shadow(1px, 1px, 3px, 0.18);
 		margin-top: -1px;
     }
     .back-button {
         right: 0;
-		/*.gradient(@mainColor, darken(@mainColor, 3%));
-		.drop-shadow(1px, 1px, 3px, 0.18);*/
+		.gradient(@mainColor, darken(@mainColor, 3%));
+		.drop-shadow(1px, 1px, 3px, 0.18);
 		margin-top: -1px;
     }
     .menu-button, .back-button {
@@ -327,46 +320,21 @@ body {
     
 }
 .ui-footer {
-    .box-sizing;
     font-size: 15px;
-    padding: 0 30px;
+    padding: 0 15px;
     text-shadow: none;
     background: @themeColor;
     border: 0;
     font-weight: 400;
-    overflow: hidden;
-    color: @moreGrayColor;
-    p {
-            margin: 0 !important;
-            margin-top: 13px !important;
-            span {
-                float: right;
-                margin-top: -6px;
-            }
-    }
-    .footer-actions {
-        float: left;
-        margin: 0 auto;
-        a {
-            background: @color2;
-            display: block;
-            width: 24px;
-            height: 24px;
-            float: left;
-            margin: 8px 4px;
-            
-            &:hover, &.hover {
-                background: lighten(@color2, 5%);
-            }
-            
-            img {
-                width: 16px;
-                height: 16px;
-                display: block;
-                margin: 4px;
-            }
-        }
-    }
+	overflow: hidden;
+	color: @moreGrayColor;
+	p {
+		margin: 15px 0 !important;
+                span {
+                    float: right;
+                    margin-top: -6px;
+                }
+	}
 }
 .header-shadow {
     background: url(../images/shadow.png) center bottom no-repeat;
@@ -377,8 +345,8 @@ body {
 }
 
 .ui-body-a, .ui-content {
-    color: @typoColor;
-    background: @mainColor !important;
+	color: @typoColor;
+    background: @grayColor !important;
     padding: 0;
     text-shadow: 1px 0 @mainColor;
 /*    typography */
@@ -406,8 +374,8 @@ body {
     }
     h2 {
         color: @typoColor;
-		background: @whiteColor;
-		
+		background: @grayColor;
+		border-right: 4px solid @themeColor;
 		font-size: 18px;
 		font-weight: 400;
 		text-shadow: none;
@@ -428,9 +396,8 @@ body {
         border: 0px;
     }
     ul.nav-list li a {
-        /*.gradient(@mainColor, @moreGrayColor);*/
-        background: @whiteColor;
-        margin-bottom: 1px;
+        border-left: 5px solid @themeColor;
+        .gradient(@mainColor, @moreGrayColor);
         font-weight: 400;
         padding: 5%;
 	@media only screen and (min-width: 500px) {
@@ -457,11 +424,7 @@ body {
     
     
     .bread-crumb {
-        display: none;
-        position: fixed;
-        bottom: 40px;
-        width: 100%;
-        .box-sizing;
+        
         ul {
             .gradient(@grayColor, @moreGrayColor);
             border: 1px solid darken(@moreGrayColor, 5%);
@@ -554,6 +517,7 @@ body {
 	text-align: center;
       }
       
+      .borderRadiusMe(5px);
       text-shadow: none;
       .gradient(@grayColor, @moreGrayColor);
     }
@@ -907,7 +871,7 @@ form.designed {
 
 .blog-article {
   .article-header {
-    background: @whiteColor;
+    background: @grayColor;
     border-bottom: 1px solid @moreGrayColor;
     padding: 4%;
     margin-bottom: 10px;
@@ -991,101 +955,14 @@ form.designed {
 }
 
 
-.menu-blocks {
-    margin: 30px;
-    margin-right: 18px;
-    .box-sizing;
-    .menu-block {
-        cursor: pointer;
-        display: block;
-        
-        opacity: 0;
-        
-        width: 30%;
-        height: 75px;
-        background: @blockColor;
-        margin-right: 3%;
-        margin-bottom: 12px;
-        float: left;
-        position: relative;
-        
-        &.hover {
-            background: darken(@blockColor, 2%);
-        }
-        img {
-            display: block;
-            margin: 0 auto;
-            width: 48px;
-            height: 48px;
-            margin-top: 16px;
-            margin-bottom: 4px;
-        }
-        span {
-            color: @themeColor;
-            display: block;
-            font-weight: 100;
-            position: absolute;
-            bottom: 0px;
-            left: 2px;
-        }
-        
-        
-        
-        padding-top: -10%;
-        transition-property: opacity, padding;
-        transition-duration: 0.2s;
-        transition-timing-function: ease-out;
-        -moz-transition-property: opacity, padding;
-        -moz-transition-duration: 0.2s;
-        -moz-transition-timing-function: ease-out;
-        -webkit-transition-property: opacity, padding;
-        -webkit-transition-duration: 0.2s;
-        -webkit-transition-timing-function: ease-out;
-        -o-transition-property: opacity, padding;
-        -o-transition-duration: 0.2s;
-        -o-transition-timing-function: ease-out;
-        opacity: 0;
-        filter: alpha(opacity=0);
-        transform-origin: left center;
-        -webkit-transform-origin: left center;
-        -moz-transform-origin: left center;
-        
-        &.on {
-            padding-top: 0;
-            opacity: 1;
-        }
-
-    }
-}
-
-.website-heading {
-    .head {
-        font-size: 20px;
-        text-transform: lowercase;
-        margin-bottom: 0;
-        margin-left: 30px;
-        font-weight: 200;
-    }
-    .subhead {
-        font-size: 14px;
-        text-transform: lowercase;
-        margin-bottom: 30px;
-        margin-left: 30px;
-        font-weight: 200;
-    }
-}
-
 #menu {
-  background: #5a5959 !important;
-  background: @typoColor !important;
+  background: #5a5959 url(../images/menuBg.gif) !important;
   background-attachment: fixed;
-  width: 100%;
+  width: 165px;
   height: auto;
   display: block;
   float: left;
   display: none;
-  position: absolute;
-  z-index: 100000000000000000;
 }
 
 #search {
@@ -1126,6 +1003,7 @@ form.designed {
   color: #fff;
   font-size: 14px;
   text-decoration: none;
+  width: 165px;
   display: block;
   padding: 10px 0px 10px 10px;
   box-sizing: border-box;
@@ -1234,38 +1112,16 @@ form.designed {
   background: @grayColor;
 }
 
-@media only screen and (min-width: 1010px) {
-}
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1010px) {
+    #menu {
+        display: block !important;
+    }
     .ui-mobile [data-role="page"], .ui-mobile [data-role="dialog"], .ui-page {
-        
-/*        max-width: 844px;*/
+        width: 845px;
+        left: 165px;
     }
-    .ui-footer {
-/*        max-width: 844px;*/
-    }
-    .ui-header {
-/*        max-width: 842px;*/
-    }
-    
-    .menu-blocks {
-        .menu-block {
-            width: 23%;
-            margin-right: 2%;
-            margin-top: 1px;
-            
-            img {
-                width: 48px;
-                height: 48px;
-            }
-        }
-    }
-    
-    
-}
-@media only screen and (min-width: 700px) {
-    .menu-block span {
-        font-size: 17px;
+    .menu-button {
+        display: none !important;
     }
 }

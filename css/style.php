@@ -1,8 +1,14 @@
-
 /* less codes */
 @mainColor: #F6F6F6;
 @whiteColor: #fff;
+@themeColor: #1d8d20;
+@themeColor: #20689b;
+@themeColor: #1cb3f3;
+@themeColor: #c42423;
+@themeColor: #199dd4;
+@themeColor: #83a5db;
 @themeColor: #696069;
+@themeColor: #<?=$_GET['color']?$_GET['color']:"83a5db"?>;
 @blockColor: #ffffff;
 
 @typoColor: #474749;
@@ -31,6 +37,28 @@
 
 
 
+<? if ($_GET['theme'] == "dark") {?>
+
+@themeColor: #eee06d; /*default color */
+@themeColor: #<?=$_GET['color']?$_GET['color']:"eee06d"?>;
+@mainColor: #555;
+@typoColor: #fff;
+@grayColor: #444;
+@moreGrayColor: #222;
+@blockColor: #ffffff;
+.whiteBg() {
+	background: #222;
+}
+@whiteColor: #000;
+.splashBg() {
+	background: (@moreGrayColor);
+}
+.bcSeparator() {
+    background: url(../images/bc-separator-dark.png) right center no-repeat;
+}
+@blockColor: #000;
+
+<? } ?>
 
 .drop-shadow(@x-axis: 0, @y-axis: 1px, @blur: 2px, @alpha: 0.1) {
   -webkit-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
@@ -1238,17 +1266,16 @@ form.designed {
 }
 
 @media only screen and (min-width: 600px) {
-    .ui-mobile [data-role="page"], .ui-mobile [data-role="dialog"], .ui-page {
-        
-/*        max-width: 844px;*/
-    }
-    .ui-footer {
-/*        max-width: 844px;*/
-    }
-    .ui-header {
-/*        max-width: 842px;*/
-    }
-    
+	    .ui-mobile [data-role="page"], .ui-mobile [data-role="dialog"], .ui-page {
+
+	/*        max-width: 844px;*/
+	    }
+	    .ui-footer {
+	/*        max-width: 844px;*/
+	    }
+	    .ui-header {
+	/*        max-width: 842px;*/
+	    }    
     .menu-blocks {
         .menu-block {
             width: 23%;
