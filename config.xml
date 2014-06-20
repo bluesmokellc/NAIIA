@@ -13,4 +13,16 @@
     <preference name="fullscreen" value="false" />
     <preference name="webviewbounce" value="true" />
     <preference name="StatusBarOverlaysWebView" value="true" />
+
+    <gap:splash src="images/splashscreens/apple-touch-startup-image-320x460.png"   gap:platform="android" gap:qualifier="port-ldpi" />
+    <gap:splash src="images/splashscreens/apple-touch-startup-image-320x460.png"   gap:platform="android" gap:qualifier="port-mdpi" />
+    <gap:splash src="images/splashscreens/apple-touch-startup-image-320x460.png"   gap:platform="android" gap:qualifier="port-hdpi" />
+    <gap:splash src="images/splashscreens/apple-touch-startup-image-320x460.png"   gap:platform="android" gap:qualifier="port-xhdpi" />
+    <gap:splash src="images/splashscreens/apple-touch-startup-image-320x460.png"   gap:platform="blackberry" />
+    <gap:splash src="images/splashscreens/apple-touch-startup-image-320x460.png"   gap:platform="ios"     width="320" height="480" />
+    <gap:splash src="images/splashscreens/apple-touch-startup-image-640x920.png"   gap:platform="ios"     width="640" height="960" />
+    <gap:splash src="images/splashscreens/apple-touch-startup-image-640x1096.png"  gap:platform="ios"     width="640" height="1136" />
+    <gap:splash src="images/splashscreens/apple-touch-startup-image-1536x2008.png" gap:platform="ios"     width="768" height="1024" />
+    <gap:splash src="images/splashscreens/apple-touch-startup-image-1496x2048.png" gap:platform="ios"     width="1024" height="768" />
+    <gap:splash src="images/splashscreens/apple-touch-startup-image-320x460.png"   gap:platform="winphone" />
 </widget>
