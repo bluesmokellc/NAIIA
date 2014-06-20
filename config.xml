@@ -7,8 +7,10 @@
     <author email="jim@coconnect.co" href="http://www.naiia.com/">
         Coconnect
     </author>
+    <icon src="logo.png" />
     <content src="index.html" />
     <access origin="*" />
     <preference name="fullscreen" value="false" />
     <preference name="webviewbounce" value="true" />
+    <preference name="StatusBarOverlaysWebView" value="true" />
 </widget>
